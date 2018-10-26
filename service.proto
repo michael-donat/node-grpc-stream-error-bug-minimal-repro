@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+message ExampleRequest {
+
+}
+
+message Answer {
+    string answer = 1;
+}
+
+message ExampleResponse {
+    Answer answer = 1;
+}
+
+service Example {
+    rpc ExampleCall (ExampleRequest) returns (stream ExampleResponse) {};
+}
+
